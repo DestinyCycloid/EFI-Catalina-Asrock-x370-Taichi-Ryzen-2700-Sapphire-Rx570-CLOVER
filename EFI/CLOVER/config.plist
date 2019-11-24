@@ -144,53 +144,11 @@
 	</dict>
 	<key>GUI</key>
 	<dict>
-		<key>Custom</key>
-		<dict>
-			<key>Entries</key>
-			<array>
-				<dict>
-					<key>Disabled</key>
-					<false/>
-					<key>FullTitle</key>
-					<string>Windows 10</string>
-					<key>Hidden</key>
-					<false/>
-					<key>Ignore</key>
-					<false/>
-					<key>Type</key>
-					<string>Windows</string>
-					<key>Volume</key>
-					<string>1B78F3BE-403A-4295-9E71-80FA5B340F82</string>
-					<key>VolumeType</key>
-					<string>Internal</string>
-				</dict>
-				<dict>
-					<key>Disabled</key>
-					<false/>
-					<key>FullTitle</key>
-					<string>OSX Catalina</string>
-					<key>Hidden</key>
-					<false/>
-					<key>Ignore</key>
-					<false/>
-					<key>NoCaches</key>
-					<false/>
-					<key>Type</key>
-					<string>OSX</string>
-					<key>Volume</key>
-					<string>B47E050B-94ED-4E14-A906-017F043E6E5C</string>
-					<key>VolumeType</key>
-					<string>Internal</string>
-				</dict>
-			</array>
-		</dict>
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
 			<string>Legacy</string>
 			<string>Recovery</string>
-			<string>bootmgr.efi</string>
-			<string>BOOTX64.efi</string>
 		</array>
 		<key>KbdPrevLang</key>
 		<false/>
@@ -202,14 +160,7 @@
 			<true/>
 		</dict>
 		<key>Scan</key>
-		<dict>
-			<key>Entries</key>
-			<true/>
-			<key>Linux</key>
-			<true/>
-			<key>Tool</key>
-			<false/>
-		</dict>
+		<true/>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>TextOnly</key>
