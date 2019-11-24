@@ -39,6 +39,20 @@
 			<array>
 				<dict>
 					<key>Comment</key>
+					<string>change PNP0C09 to PNPFFFF (prevent EC)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QdAMCQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					QdD//w==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change HDAS to HDEF</string>
 					<key>Disabled</key>
 					<false/>
@@ -71,7 +85,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>npci=0x2000 debug=0x100 keepsyms=1</string>
+		<string>npci=0x2000 debug=0x100 keepsyms=1 agpdmod=pikera</string>
 		<key>DefaultLoader</key>
 		<string>boot.efi</string>
 		<key>DefaultVolume</key>
@@ -138,7 +152,23 @@
 					<key>Disabled</key>
 					<false/>
 					<key>FullTitle</key>
-					<string>Mac OSX Catalina</string>
+					<string>Windows 10</string>
+					<key>Hidden</key>
+					<false/>
+					<key>Ignore</key>
+					<false/>
+					<key>Type</key>
+					<string>Windows</string>
+					<key>Volume</key>
+					<string>1B78F3BE-403A-4295-9E71-80FA5B340F82</string>
+					<key>VolumeType</key>
+					<string>Internal</string>
+				</dict>
+				<dict>
+					<key>Disabled</key>
+					<false/>
+					<key>FullTitle</key>
+					<string>OSX Catalina</string>
 					<key>Hidden</key>
 					<false/>
 					<key>Ignore</key>
@@ -148,71 +178,7 @@
 					<key>Type</key>
 					<string>OSX</string>
 					<key>Volume</key>
-					<string>5650756E-9EF2-4779-AC9A-19FF9EB0BD89</string>
-					<key>VolumeType</key>
-					<string>Internal</string>
-				</dict>
-				<dict>
-					<key>Disabled</key>
-					<false/>
-					<key>FullTitle</key>
-					<string>Windows 10</string>
-					<key>Hidden</key>
-					<false/>
-					<key>Ignore</key>
-					<false/>
-					<key>Type</key>
-					<string>Windows</string>
-					<key>Volume</key>
-					<string>547493A0-01C6-4058-BDDC-92189E8519A7</string>
-					<key>VolumeType</key>
-					<string>Internal</string>
-				</dict>
-				<dict>
-					<key>Disabled</key>
-					<false/>
-					<key>FullTitle</key>
-					<string>New Custom Entry</string>
-					<key>Hidden</key>
-					<true/>
-					<key>Ignore</key>
-					<false/>
-					<key>Type</key>
-					<string>Windows</string>
-					<key>Volume</key>
-					<string>266EAECD-318A-4AE7-ADDA-DF7E0BC5EAB7</string>
-					<key>VolumeType</key>
-					<string>Internal</string>
-				</dict>
-				<dict>
-					<key>Disabled</key>
-					<false/>
-					<key>FullTitle</key>
-					<string>New Custom Entry</string>
-					<key>Hidden</key>
-					<true/>
-					<key>Ignore</key>
-					<false/>
-					<key>Type</key>
-					<string>Windows</string>
-					<key>Volume</key>
-					<string>4F8C069A-F3EE-46EC-96A5-FCD1B283F4CC</string>
-					<key>VolumeType</key>
-					<string>Internal</string>
-				</dict>
-				<dict>
-					<key>Disabled</key>
-					<false/>
-					<key>FullTitle</key>
-					<string>New Custom Entry</string>
-					<key>Hidden</key>
-					<true/>
-					<key>Ignore</key>
-					<false/>
-					<key>Type</key>
-					<string>Windows</string>
-					<key>Volume</key>
-					<string>-</string>
+					<string>B47E050B-94ED-4E14-A906-017F043E6E5C</string>
 					<key>VolumeType</key>
 					<string>Internal</string>
 				</dict>
@@ -223,18 +189,27 @@
 			<string>Preboot</string>
 			<string>Legacy</string>
 			<string>Recovery</string>
+			<string>bootmgr.efi</string>
+			<string>BOOTX64.efi</string>
 		</array>
 		<key>KbdPrevLang</key>
 		<false/>
 		<key>Language</key>
-		<string>cn:0</string>
+		<string>en:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>Enabled</key>
 			<true/>
 		</dict>
 		<key>Scan</key>
-		<true/>
+		<dict>
+			<key>Entries</key>
+			<true/>
+			<key>Linux</key>
+			<true/>
+			<key>Tool</key>
+			<false/>
+		</dict>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>TextOnly</key>
@@ -453,6 +428,22 @@
 				</data>
 				<key>MatchOS</key>
 				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				uB0AAIAx2zHJMdIPokGJxg8fQADr
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpuid_set_cache_info - cpuid 0x8000001D instead 0</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				McAx2zHJMdIPokGJxoM9lIagAAB0
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.1</string>
 				<key>Replace</key>
 				<data>
 				uB0AAIAx2zHJMdIPokGJxg8fQADr
@@ -690,6 +681,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>xlnc - cpuid_set_cpufamily - force CPUFAMILY_INTEL_PENRYN</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				MduAPbmQoAAGdVw=
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.1</string>
+				<key>Replace</key>
+				<data>
+				u7xP6njpXQAAAJA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>algrey - cpuid_set_info - ryzen cores and logicals count</string>
 				<key>Disabled</key>
 				<false/>
@@ -804,6 +811,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>xlnc - cpuid_set_info - jmp to calculations and set cpuid_cores_per_package</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				dXHo5QYAAEiLBdaPoABIiQWXkKAA
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.1</string>
+				<key>Replace</key>
+				<data>
+				dE7o5QYAAJCJDdaPoADpfgAAAGaQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>xlnc - cpuid_set_info - cores and threads calculations</string>
 				<key>Disabled</key>
 				<false/>
@@ -813,7 +836,7 @@
 				6x65NQAAAA8ySMHiIInBSAnRuQEAAQAPRcgPt8HB6RA=
 				</data>
 				<key>MatchOS</key>
-				<string>10.15.0</string>
+				<string>10.15.0,10.15.1</string>
 				<key>Replace</key>
 				<data>
 				uAgAAIAx2zHJMdIPokGJzkUPtvZB/8a4HgAAgDHbMckx
@@ -881,6 +904,22 @@
 				</data>
 				<key>MatchOS</key>
 				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				ZmZmDx+EAAAAAAA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - tsc_init - remove Penryn check to execute default case</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				PbxP6ngPhNkBAAA=
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.1</string>
 				<key>Replace</key>
 				<data>
 				ZmZmDx+EAAAAAAA=
@@ -984,6 +1023,24 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>xlnc - tsc_init - grab DID and VID from MSR</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				uZQBAAAPMonDuc4AAAAPMg+2zokNk3SYAA+2xIkFjnSY
+				AA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.1</string>
+				<key>Replace</key>
+				<data>
+				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
+				kA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>algrey - tsc_init - skip test and go get FSBFrequency</string>
 				<key>Disabled</key>
 				<false/>
@@ -1062,7 +1119,7 @@
 				98MAAAEAdA==
 				</data>
 				<key>MatchOS</key>
-				<string>10.15.0</string>
+				<string>10.15.0,10.15.1</string>
 				<key>Replace</key>
 				<data>
 				Zg8fRAAA6w==
@@ -1188,6 +1245,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>xlnc - lapic_interrupt - skip checks and prevent panic</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				gz04WaAAAHQO
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.1</string>
+				<key>Replace</key>
+				<data>
+				6zkPH4AAAAAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>algrey - mtrr_update_action - fix PAT</string>
 				<key>Disabled</key>
 				<false/>
@@ -1234,11 +1307,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>07/26/2019</string>
+		<string>10/17/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IMP11.88Z.F000.B00.1907261958</string>
+		<string>IMP11.88Z.F000.B00.1910172120</string>
 		<key>Board-ID</key>
 		<string>Mac-7BA5B2D9E42DDD94</string>
 		<key>BoardManufacturer</key>
@@ -1254,7 +1327,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>1037.0.39.151.1</string>
+		<string>1037.40.124.0.0</string>
 		<key>Family</key>
 		<string>iMac Pro</string>
 		<key>FirmwareFeatures</key>
